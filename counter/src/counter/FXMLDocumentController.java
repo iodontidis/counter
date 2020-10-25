@@ -28,13 +28,13 @@ public class FXMLDocumentController implements Initializable {
     private TextField txtCounter;
     
     
-    Thread c = new Thread();
+    MyThread c = new MyThread();
     java.lang.Thread tD = new java.lang.Thread((Runnable) c);
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("Reset pushed");
-        
+        c.set();
     }
     
     @Override
