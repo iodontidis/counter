@@ -27,6 +27,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField txtCounter;
     
+    
+    Thread c = new Thread();
+    java.lang.Thread tD = new java.lang.Thread((Runnable) c);
+    
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("Reset pushed");
@@ -36,6 +40,8 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+            tD.start();
+        
     }    
     
 }
